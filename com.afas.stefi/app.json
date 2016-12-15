@@ -1,0 +1,60 @@
+{
+	"id": "com.afas.stefi",
+	"name": {
+		"en": "Profit STEFI"
+	},
+	"version": "0.0.1",
+	"compatibility": "1.x",
+	"author": {
+		"name": "Patrick Hopman",
+		"email": "patrickhopman@me.com"
+	},
+	"drivers": [
+		{
+			"id": "zonwering",
+			"name": {
+				"en": "Zonwering"
+			},
+			"images": {
+				"large": "assets/drivers/my_driver/large.jpg",
+				"small": "assets/drivers/my_driver/small.jpg"
+			},
+			"class": "windowcoverings",
+			"capabilities": [ "windowcoverings_state" ],
+			"pair": [
+				{
+					"id": "list_my_devices",
+					"template": "list_devices",
+					"navigation": {
+						"next": "add_devices"
+					}
+				},
+				{
+					"id": "add_devices",
+					"template": "add_devices"
+				}
+			]
+		},
+		{
+			"id": "tv",
+			"name": {
+				"en": "TV"
+			},
+			"class": "other",
+			"capabilities": [ "onoff" ],
+			"pair": [
+				{
+					"id": "list_my_devices",
+					"template": "list_devices",
+					"navigation": {
+						"next": "add_devices"
+					}
+				},
+				{
+					"id": "add_devices",
+					"template": "add_devices"
+				}
+			]
+		}
+	]
+}
