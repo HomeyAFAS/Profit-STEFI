@@ -16,15 +16,9 @@ module.exports = {
 			case deviceTypes.zonwering:
 				switch(deviceState) {
 					case 'up':
-						var message = Buffer.from(device.data.up, 'hex');
-						break;
-
 					case 'down':
-						var message = Buffer.from(device.data.down, 'hex');
-						break;
-
 					case 'idle':
-						var message = Buffer.from(device.data.idle, 'hex');
+						var message = Buffer.from(device.data[deviceState], 'hex');
 						break;
 
 					default:
@@ -36,11 +30,8 @@ module.exports = {
 			case deviceTypes.tv:
 				switch(deviceState) {
 					case 'on':
-						var message = Buffer.from(device.data.on, 'hex');
-						break;
-
 					case 'off':
-						var message = Buffer.from(device.data.off, 'hex');
+						var message = Buffer.from(device.data[deviceState], 'hex');
 						break;
 
 					default:
