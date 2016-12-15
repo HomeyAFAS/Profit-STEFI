@@ -34,7 +34,19 @@ module.exports = {
 				break;
 
 			case deviceTypes.tv:
-				error = 'TV wordt nog niet ondersteund';
+				switch(deviceState) {
+					case 'on':
+						var message = Buffer.from(device.data.on, 'hex');
+						break;
+
+					case 'off':
+						var message = Buffer.from(device.data.off, 'hex');
+						break;
+
+					default:
+						error = 'TV actie niet ondersteund';
+						break;
+				}
 				break;
 
 			default:
