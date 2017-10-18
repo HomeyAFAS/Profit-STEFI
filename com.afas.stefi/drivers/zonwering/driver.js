@@ -23,9 +23,27 @@ module.exports = {
 		socket.on('list_devices', function( data, callback ){
 
 			var device_data = {
-				name: '3.01 Bedrijfsleven Zonwering',
+				name: '3.01 Kennis & Content',
 				data: {
 					id: '3.01_zonwering',
+					up: '0f0003010004bcfff04865e1008080',
+					down: '0f0003010000bcfff04865e1008101',
+					idle: '0f0003010001bcfff04965e1008081'
+				}
+			},
+			{
+				name: '3.12 Bedrijfsleven Zonwering West',
+				data: {
+					id: '3.12_zonwering_west',
+					up: '0f0003010009bcfff04823e10080c6',
+					down: '0f0003010007bcfff04823e1008147',
+					idle: '0f0003010008bcfff04923e10080c7'
+				}
+			},
+			{
+				name: '3.12 Bedrijfsleven Zonwering Noord',
+				data: {
+					id: '3.12_zonwering_noord',
 					up: '0f0003010004bcfff04865e1008080',
 					down: '0f0003010000bcfff04865e1008101',
 					idle: '0f0003010001bcfff04965e1008081'
